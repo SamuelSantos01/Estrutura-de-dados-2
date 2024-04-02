@@ -3,7 +3,7 @@
 #include <string.h>
 #include "lista.h"
 
-Nodo* criarNodo(int idade, const char* nome) {
+Nodo* criarNodo(int idade, char* nome) {
     Nodo* novoNodo = (Nodo*)malloc(sizeof(Nodo));
     if (novoNodo != NULL) {
         novoNodo->idade = idade;
@@ -29,6 +29,7 @@ void inserirNodoAoFinal(Nodo** lista, Nodo* novoNodo) {
 
 void deletarUltimoNodo(Nodo** lista) {
     if (*lista == NULL) {
+        printf("Lista vazia");
         return;
     }
     Nodo* temp = *lista;

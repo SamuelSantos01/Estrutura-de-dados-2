@@ -7,7 +7,7 @@ typedef struct no {
     struct no *prox, *ant;
 } Nodo;
 
-Nodo* criarNodo(int idade, const char* nome);
+Nodo* criarNodo(int idade,char* nome);
 void inserirNodoAoFinal(Nodo** lista, Nodo* novoNodo);
 void deletarUltimoNodo(Nodo** lista);
 void imprimirNodosParaFrente(Nodo* lista);
