@@ -27,6 +27,20 @@ void inserirNodoAoFinal(Nodo** lista, Nodo* novoNodo) {
     }
 }
 
+void inserirNodoAoFinal_TESTE(Nodo* lista, Nodo* novoNodo) {
+    if (lista == NULL) {
+        lista = novoNodo;
+    } else {
+        Nodo* temp = lista;
+        while (temp->prox != NULL) {
+            temp = temp->prox;
+        }
+        temp->prox = novoNodo;
+        novoNodo->ant = temp;
+    }
+}
+
+
 void deletarUltimoNodo(Nodo** lista) {
     if (*lista == NULL) {
         printf("Lista vazia");

@@ -11,6 +11,7 @@ int main() {
         printf("1. Inserir novo nodo\n");
         printf("2. Imprimir nodos nos dois sentidos\n");
         printf("3. Deletar o ultimo nodo\n");
+        printf("5.inserir nodo teste:\n");
         printf("4. Sair\n");
         printf("Opcao: ");
         scanf("%d", &opcao);
@@ -40,6 +41,16 @@ int main() {
             }
             case 4: {
                 printf("\nSaindo do programa.\n");
+                break;
+            }
+            case 5:{
+                int idade;
+                char nome[50];
+                printf("\nDigite a idade do novo nodo: ");
+                scanf("%d", &idade);
+                printf("Digite o nome do novo nodo: ");
+                scanf("%s", nome);
+                inserirNodoAoFinal_TESTE(lista, criarNodo(idade, nome));
                 break;
             }
             default:
